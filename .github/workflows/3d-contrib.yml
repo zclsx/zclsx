@@ -18,6 +18,31 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: zclsx
+      - name: Clean SVG
+        run: |
+          python3 << 'PYEOF'
+          import re, glob
+          for f in glob.glob('profile-3d-contrib/*.svg'):
+              with open(f, 'r') as fh:
+                  svg = fh.read()
+              svg = svg.replace('height="850"', 'height="790"').replace('viewBox="0 0 1280 850"', 'viewBox="0 0 1280 790"')
+              svg = re.sub(r'<polygon[^>]*>.*?</polygon>', '', svg, flags=re.DOTALL)
+              for label in ['Commit','Issue','PullReq','Review','Repo']:
+                  svg = re.sub(r'<text[^>]*>' + label + r'.*?</text>', '', svg, flags=re.DOTALL)
+              for lang in ['JavaScript','Python','TypeScript','MDX','Shell','Vue','HTML','CSS','other']:
+                  svg = re.sub(r'<text[^>]*>' + lang + r'.*?</text>', '', svg, flags=re.DOTALL)
+              svg = re.sub(r'<text style="font-size: 13px;"[^>]*>[^<]*</text>', '', svg)
+              svg = re.sub(r'<text[^>]*y="830"[^>]*>[^<]*</text>', '', svg)
+              svg = re.sub(r'<text style="font-size: (32|24|16)px[^"]*"[^>]*>[^<]*</text>', '', svg)
+              svg = re.sub(r'<text[^>]*>\d{4}-\d{2}-\d{2}[^<]*</text>', '', svg)
+              svg = re.sub(r'<title>[^<]*</title>', '', svg)
+              svg = re.sub(r'<rect[^>]*width="20"[^>]*>.*?</rect>', '', svg, flags=re.DOTALL)
+              svg = re.sub(r'<line[^>]*>.*?</line>', '', svg, flags=re.DOTALL)
+              svg = re.sub(r'<image[^>]*>.*?</image>', '', svg, flags=re.DOTALL)
+              with open(f, 'w') as fh:
+                  fh.write(svg)
+          print('SVG cleaned')
+          PYEOF
       - name: Commit & Push
         run: |
           git config user.name github-actions[bot]
