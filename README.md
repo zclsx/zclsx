@@ -46,8 +46,5 @@ const ark = {
 <br>
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg" />
-    <img width="95%" src="./profile-3d-contrib/profile-night-green.svg" alt="3D Contributions" />
-  </picture>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&border=true" />
 </div>
