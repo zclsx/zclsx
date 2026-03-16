@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="./banner.jpg" />
+<img width="60%" src="./banner.jpg" />
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&random=false&width=600&height=70&lines=%24+echo+%22Hello%2C+I'm+Ark%22;Full+Stack+Developer+%7C+Web3+Explorer+%7C+Open+Source" alt="Typing SVG" />
@@ -53,19 +53,3 @@ motto:      "扭转时间的公式：把握今天"
   <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=zclsx&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff" />
 </div>
 
-<br>
-
-<div align="center">
-
-```
-   ____  ____  ____  ____     ____  ____  __  __  ____   ___  ____
-  (  _ \( ___)( ___)( ___)   (  _ \( ___)(  )(  )(  _ \ / __)( ___)
-   )(_) ))__)  )__)  )__)     )___/ )__)  )(__)(  )   /( (__  )__)
-  (____/(____)(____)(__)     (__)  (____)(__)(__)(_)\_) \___)(____)
-```
-
-<img src="https://komarev.com/ghpvc/?username=zclsx&style=for-the-badge&color=0d1117&labelColor=161b22&label=VISITORS" />
-
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:0d1117&height=120&section=footer" />
